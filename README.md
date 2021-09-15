@@ -94,6 +94,7 @@ and learning part for this is added (from cell #7).
 Here is an example of learning history of the agent.
 The training continued until an average score of 100 consecutive episode
 reches 16.
+This goal was achieved with about 600 episodes.
 
 ![learning history](learning_history.png)
 
