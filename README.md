@@ -61,6 +61,12 @@ is the same as the main network,
 but updated less often.
 
 ## installation
+You need to work with python 3.6.13.
+Otherwise, you may fail installation some package,
+especially an old version of tensorflow.
+In addition, it is recommended to create with a new virtual environment
+and work in it for the following processes.
+
 [Unity ML-agents](https://github.com/openai/gym) and numpy need to be installed in adavance. 
 
 ```
@@ -68,27 +74,46 @@ pip install gym
 pip install gym[box2d]
 ```
 
-You also need to download the Unity environment as follows:
+You also need to download a zip file of the Unity environment as follows:
  - [for linux](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
  - [for mac](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
  - [for 64-bit windows](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
  - [for 32-bit windows](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
- 
+
+It is convenient to unzip the downloaded zip file above
+under the repository directory you will create next.
+
+
 Then, after cloning this repository, go to the "deep-reinforcement-learning" submodule and install necessary libraries as below:
 
 ```
 git clone https://github.com/maedamaeday/UdacityRL_p1.git --recursive
-cd deep-reinforcement-leraning/python
+cd UdacityRL_p1/deep-reinforcement-leraning/python
 pip install .
+cd ../../
 ```
 
 Note that you need "--recursive" option in cloning the repository
 to incorporate deep-reinforcement-learning submodule properly.
 
+Finally, create IPython kernel as below:
+
+```
+python -m ipkernel install --user --name env_name --display-name "env_name"
+```
+
+Please replace "env_name" with your virtual environment.
+
+
 ## run training and watch trained agent actions
 "my_Navigation.ipynb" is the main file of this repository.
 The first part is taken from the sample code provided by Udacity,
 and learning part for this is added (from cell #7).
+
+Before running the notebook,
+you need to specify the Unity environment in the cell #2,
+following instructions in the notebook.
+
 
 ## performance
 Here is an example of learning history of the agent.
