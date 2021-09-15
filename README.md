@@ -89,10 +89,10 @@ Here is an example of learning history of the agent.
 The training continued until an average score of 100 consecutive episode
 reches 16.
 
-![learning history]("./leraning_history.png")
+![learning history](leraning_history.png)
 
 The gif file "demo.gif" shows performance of the trained agent.
 In this example, the achieved score is 17.
 
-![demo of the trained agent]("./demo.png")
+![demo of the trained agent](demo.gif)
 
