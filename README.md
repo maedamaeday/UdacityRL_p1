@@ -56,7 +56,9 @@ where it samples information of 64(=batch size) steps from the replay buffer
 and it is used for training.
 ### fixed target
 In calculating the target Q value above, Q values for the next state is taken from a "similar" neural network to one used in calculating the expected Q value.
-Here, the "similar" network is 
+Here, the "similar" network, refered to as the "target" network,
+is the same as the main network,
+but updated less often.
 
 ## installation
 [Unity ML-agents](https://github.com/openai/gym) and numpy need to be installed in adavance. 
@@ -72,12 +74,16 @@ You also need to download the Unity environment as follows:
  - [for 64-bit windows](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
  - [for 32-bit windows](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
  
-Then, after cloning this repository, go to the "deep-reinforcement-leraning" submodule and install necessary libraries as below:
+Then, after cloning this repository, go to the "deep-reinforcement-learning" submodule and install necessary libraries as below:
 
 ```
-cd deep-reinforcement-leraning
+git clone https://github.com/maedamaeday/UdacityRL_p1.git --recursive
+cd deep-reinforcement-leraning/python
 pip install .
 ```
+
+Note that you need "--recursive" option in cloning the repository
+to incorporate deep-reinforcement-learning submodule properly.
 
 ## run training and watch trained agent actions
 "my_Navigation.ipynb" is the main file of this repository.
@@ -89,7 +95,7 @@ Here is an example of learning history of the agent.
 The training continued until an average score of 100 consecutive episode
 reches 16.
 
-![learning history](leraning_history.png)
+![learning history](learning_history.png)
 
 The gif file "demo.gif" shows performance of the trained agent.
 In this example, the achieved score is 17.

@@ -118,7 +118,15 @@ class Agent():
         for target_param, local_param in zip(target_model.parameters(), local_model.parameters()):
             target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
 
+    def load(self, model_path):
+        """load saved weights for the local model
 
+        Params
+        ======
+            model_path (str): path for the model
+        """        
+        self.qnetwork_local.load_state_dict(torch.load(model_path))
+            
 class ReplayBuffer:
     """Fixed-size buffer to store experience tuples."""
 
