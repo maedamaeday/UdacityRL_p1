@@ -70,7 +70,8 @@ You also need to download the Unity environment as follows:
  - [for linux](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
  - [for mac](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
  - [for 64-bit windows](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
- - [for 32-bit windows](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip) 
+ - [for 32-bit windows](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
+ 
 Then, after cloning this repository, go to the "deep-reinforcement-leraning" submodule and install necessary libraries as below:
 
 ```
@@ -87,7 +88,11 @@ and learning part for this is added (from cell #7).
 Here is an example of learning history of the agent.
 The training continued until an average score of 100 consecutive episode
 reches 16.
-![learning history]("leraning_history.png")
+
+![learning history]("./leraning_history.png")
 
 The gif file "demo.gif" shows performance of the trained agent.
 In this example, the achieved score is 17.
+
+![demo of the trained agent]("./demo.png")
+
