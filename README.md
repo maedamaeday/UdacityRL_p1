@@ -56,7 +56,7 @@ cd ../../
 Note that you need "--recursive" option in cloning the repository
 to incorporate deep-reinforcement-learning submodule properly.
 
-Finally, create IPython kernel as below:
+Finally, create IPython kernel as below to run ipynb files:
 
 ```
 python -m ipkernel install --user --name env_name --display-name "env_name"
@@ -64,7 +64,14 @@ python -m ipkernel install --user --name env_name --display-name "env_name"
 
 Please replace "env_name" with your virtual environment.
 
-## model detail and its performance
+## run training and watch trained agent actions
+"my_Navigation.ipynb" is the main file of this repository.
+The first part is taken from the sample code provided by Udacity,
+and learning part for this is added (from cell #7).
 
-The details for the model architecture, training method and its performance is
+Before running the notebook,
+you need to specify the Unity environment in the cell #2,
+following instructions in the notebook.
+
+The details of the model architecture, training method and its performance is
 summarized in [Report.md](Report.md)

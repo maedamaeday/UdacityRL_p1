@@ -41,15 +41,6 @@ Here, the "similar" network, refered to as the "target" network,
 is the same as the main network,
 but updated less often.
 
-## run training and watch trained agent actions
-"my_Navigation.ipynb" is the main file of this repository.
-The first part is taken from the sample code provided by Udacity,
-and learning part for this is added (from cell #7).
-
-Before running the notebook,
-you need to specify the Unity environment in the cell #2,
-following instructions in the notebook.
-
 
 ## performance
 Here is an example of learning history of the agent.
@@ -63,3 +54,21 @@ The gif file "demo.gif" shows performance of the trained agent.
 In this example, the achieved score is 17.
 
 ![demo of the trained agent](demo.gif)
+
+## possible future improvement
+Various techniques can be applied to improve training and performance of the agent.
+One option is priotized experience replay,
+an improved version of experience replay applied in this model.
+In this method, rare experience with large TD error is sampled with higher probability
+and the agent can learn wider cases effectively.
+In watching actions of the current trained agent,
+a rare case actually happened;
+two yellow bananas are observed
+at the left and right side with the same distance from the agent
+and the agent got stuck,
+where it repeats to turn right and left infinitely.
+If such a case is effectively learned in the training,
+it would be possible for the agent to avoid to got stuck.
+
+
+
